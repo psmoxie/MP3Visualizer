@@ -1,0 +1,220 @@
+/* Blue background for the website*/
+body {
+background-color:  #0088ff;
+background-attachment: fixed;
+}
+
+/* Titles, Headers */
+#title{
+  width:100%;
+  position:relative;
+  border-radius: 1px;
+  background-color:  #000000;
+  color:#0088ff;
+  box-shadow: 0px 2px #ffffff;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Just about every element has a shine effect over it */
+#title img{
+  max-width: 100%;
+  width:100%;
+  height: 24px;
+  object-fit:flex;
+  position:absolute;
+}
+
+.bigContainer{
+  float: left;
+  padding: 10px;
+  width:100%;
+}
+
+/* Containers/ Using percentage values instead of px values for the sizes allows for elements to dynamically fit the screen */
+.bigContainer.left{
+  max-width:70%;
+  
+}
+
+.bigContainer.right{
+  max-width:25%;
+  
+}
+
+.header {
+text-align: center;
+padding: 2px;
+color: white;
+background-color: #ffffff;
+}
+
+/* Big screen that holds the siriwave.js image*/
+.rectangle {
+width: 100%;
+max-width: 100%;
+height: 420px;
+position:relative;
+background-color: #000000;
+box-shadow: 0px 2px #ffffff;
+border-radius: 2px;
+margin-top: 8px;
+}
+
+.rectangle img{
+  max-width: 100%;
+  width:100%;
+  object-fit:flex;
+  position:absolute;
+}
+
+
+/* Time related things */
+.timeContainer{
+  width: 25%;
+  display: inline-block;
+  position:relative;
+  background-color: #000000;
+  box-shadow: 0px 2px #ffffff;
+  text-align: center;
+  border-radius: 1px;
+}
+
+.timeContainer img{
+  width:100%;
+  max-width: 100%;
+  height:30px;
+  position:absolute;
+  display: flex;
+}
+
+/* Current song time */
+#timer {
+  color: #e43215;
+  transform: translateY(15px); /* Wouldn't line up just right with its container, so I had to push it down a bit */
+  display: inline;
+  position:relative;
+  font-size: 28px;
+  font-family:'Courier New', Courier, monospace;
+  padding: 5px 0;
+}
+
+/* Total song time */
+#duration {
+  color: #0088ff;
+  transform: translateY(15px); /* Wouldn't line up just right with its container, so I had to push it down a bit */
+  display: inline;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 28px;
+  padding: 5px 0;
+  position:relative;
+}
+
+/* Progress bar */
+/* Black background that contains the progress bar */
+#progressBack{
+  border-radius: 1px;
+  background-color: #000000;
+  box-shadow: 0px 2px #ffffff;
+  height: 26px;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* The progress bar itself */
+#progress{
+  --barSize: 0%; /* set its initial size to 0 (Invisible) */
+  background-color: #0088ff;
+  font-size: 20px;
+  height: 5px;
+  width: var(--barSize); 
+  padding: 4px 0;
+  transform: translateY(50%); /* Positions the progress bar halfway down the container vertically */
+
+}
+
+#progressBack img{
+  max-width: 100%;
+  width: 100%;
+  height:26px;
+  transform: translateY(-12px);
+  object-fit:flex;
+  position:absolute;
+}
+
+/* Buttons */
+/* Contains all of the buttons in a nice row*/
+.buttonContainer{
+  width: 70%;
+  display: inline-block;
+
+}
+
+/* The buttons are actually two images on top of each other! */
+/* The top image shows the part of the buttons that the user clicks, while the bottom image creates the illusion of having depth */
+.btnBack{
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  transform: translateY(9px);
+
+}
+
+/* Back image for the button */
+.btnBack img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+
+}
+
+/* The part of the button that can actually be clicked */
+.btn {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  transform: translate(-100%, 0%);
+  text-align: center;
+}
+
+/* Button is translated downward when hovered over */
+.btn:hover {
+  translate: 0px 2px;
+filter: brightness(.8);
+}
+
+/* Button is translated down on click to give the effect of it being physically pressed down*/
+.btn:active {
+translate: 0px 8px;
+filter: brightness(.5);
+}
+
+/* The playlist tab */
+#playlist{
+  width:100%;
+  text-align: left;
+  display:inline-block;
+  position:relative;
+  border-radius: 2px;
+  background-color: #000000;
+  box-shadow:  0px 2px #ffffff;
+  font-size: 24px;
+  font-family:'Courier New', Courier, monospace;
+  }
+
+/* The individual songs in the playlist */
+#list{
+  position: relative;
+  padding: 1px;
+  color: #0088ff; 
+}
+
+#playlist img{
+max-width: 100%;
+width:100%;
+height:100%;
+position:absolute;
+display: flex;
+}
